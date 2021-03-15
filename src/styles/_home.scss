@@ -1,0 +1,460 @@
+.puzzles-home {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+
+  .c-puzzle:nth-of-type(2) {
+    background-color: rgba(0, 0, 0, 0.2);
+    background-color: rgba(104, 92, 96, 0.2);
+    left: 3%;
+    top: 0;
+    width: 14%;
+    height: 100%;
+    transform: skewX(-20deg) translateZ(0);
+    transition: opacity 2.2s cubic-bezier(0.23, 1, 0.32, 1) 0.8s;
+
+    @include mq(991px) {
+      width: 8%;
+    }
+  }
+
+  .c-puzzle:nth-of-type(3) {
+    background-color: rgba(2, 2, 2, 0.4);
+    background-color: rgba(104, 92, 96, 0.2);
+    left: 5%;
+    top: 0;
+    width: 20%;
+    height: 100%;
+    transform: skewX(35deg) translateZ(0);
+    transition: opacity 2.2s cubic-bezier(0.23, 1, 0.32, 1) 0.8s;
+
+    @include mq(991px) {
+      width: 12%;
+    }
+  }
+}
+
+.absolute {
+  position: absolute;
+  z-index: 1;
+}
+
+.homeWrapper-home {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  background-color: $BackgroundColor-second;
+  overflow: hidden;
+
+  @include mq(991px) {
+    height: 90vh;
+  }
+
+  .video-container-home {
+    &::after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100vh;
+      background-color: rgba(0, 0, 0, 0.4);
+      top: 0;
+      left: 0;
+    }
+
+    video {
+      object-fit: cover;
+      width: 100vw;
+      height: 100vh;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-repeat: no-repeat;
+    }
+  }
+}
+
+.home-content {
+  font-family: $Fontfamily-serif;
+  position: absolute;
+  padding-left: 20px;
+  bottom: 10%;
+  right: 6%;
+  z-index: 10;
+  color: white;
+  width: 70%;
+  font-weight: 500;
+  font-size: calc(20px + 40 * ((53vw + 53vh) - 600px) / 820);
+
+  @include mq(700px) {
+    font-size: calc(16px + 40 * ((53vw + 53vh) - 600px) / 820);
+    width: 70%;
+    bottom: 10%;
+  }
+
+  @include mq(991px) {
+    font-size: calc(8px + 40 * ((53vw + 53vh) - 600px) / 820);
+    width: 60%;
+  }
+
+  @include mq(1025px) {
+    padding-left: 0px;
+    width: 45%;
+    font-size: calc(3px + 38 * ((53vw + 53vh) - 600px) / 820);
+  }
+
+  p {
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 90%;
+      height: 1px;
+      bottom: -10px;
+      left: 0;
+      background-color: #ccc;
+    }
+  }
+}
+
+.home-bottom-line {
+  font-family: $Fontfamily-serif;
+  letter-spacing: 2px;
+  bottom: 2%;
+  right: 0;
+  z-index: 10;
+  color: white;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: nowrap;
+
+  @include mq(991px) {
+    bottom: 5%;
+  }
+
+  p {
+    color: rgb(255, 40, 40);
+    margin-left: 0;
+    font-size: 0.8rem;
+
+    @include mq(991px) {
+      font-size: 1.2rem;
+    }
+  }
+
+  p:hover {
+    font-weight: bold;
+    cursor: pointer;
+  }
+}
+
+.home-right-line-top {
+  top: 0;
+  right: 6%;
+  z-index: 10;
+  color: white;
+  height: 100%;
+  width: 10%;
+
+  @include mq(991px) {
+    right: 5%;
+  }
+
+  span {
+    display: block;
+    height: 43%;
+    border-right: 1px solid $BackgroundColor-main;
+    bottom: 0;
+  }
+}
+
+.home-right-line-bottom {
+  top: 57%;
+  right: 6%;
+  z-index: 10;
+  color: white;
+  height: 100%;
+  width: 10%;
+
+  @include mq(991px) {
+    right: 5%;
+  }
+
+  span {
+    display: block;
+    height: 50%;
+    border-right: 1px solid $BackgroundColor-main;
+  }
+}
+
+.home-right-line-middle {
+  top: 50%;
+  right: 6%;
+  z-index: 10;
+  color: white;
+  height: auto;
+  width: auto;
+  transform: translate(50%, -50%);
+
+  @include mq(991px) {
+    right: 5%;
+  }
+
+  span {
+    display: block;
+    height: 40%;
+    text-align: right;
+    font-size: 2rem;
+    color: $BackgroundColor-main;
+
+    @include mq(991px) {
+      font-size: 3rem;
+    }
+  }
+
+  span:hover {
+    color: $Fontcolor-main;
+    cursor: pointer;
+  }
+}
+
+.homeBanner {
+  position: relative;
+  width: 100%;
+  padding: 5px 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: rgb(15, 15, 15);
+  z-index: 10;
+  box-shadow: 0 5px 10px rgba(56, 56, 56, 0.2);
+
+  @include mq(768px) {
+    padding: 10px;
+  }
+
+  @include mq(991px) {
+    padding: 20px;
+    height: 10vh;
+  }
+
+  p:first-of-type {
+    letter-spacing: 2px;
+    font-size: 0.9rem;
+  }
+
+  p:last-of-type {
+    letter-spacing: 2px;
+    font-size: 0.9rem;
+  }
+
+  h3 {
+    font-size: 1.25rem;
+    width: 100%;
+    text-align: center;
+
+    @include mq(991px) {
+      font-size: 1.5rem;
+    }
+  }
+}
+
+//======================CARDS========================
+.homeCards {
+  width: 100vw;
+  background-color: rgb(255, 255, 255);
+  padding: 10px 40px;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
+  a{
+    text-decoration: none;
+  }
+}
+
+.cards-title {
+  width: 100vw;
+  max-width: 1600px;
+  text-align: center;
+  padding: 10px 0;
+  margin-top: 20px;
+
+  h1 {
+    position: relative;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-family: $Fontfamily-serif;
+    color: $Fontcolor-second;
+    text-align: center;
+    font-size: 1.8rem;
+
+    @include mq(991px) {
+      font-size: 2rem;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: -25px;
+      left: 50%;
+      width: 5%;
+      height: 6px;
+      transform: translateX(-50%);
+      background-color: $Fontcolor-main;
+      border-radius: 10px;
+    }
+  }
+}
+
+.cards-wrapper {
+  width: 100%;
+  max-width: 1600px;
+  height: 100%;
+  margin: 10px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+
+  @include mq(991px) {
+    flex-direction: row;
+    margin: 30px 0;
+  }
+}
+
+.card {
+  height: 400px;
+  width: 320px;
+  min-width: 310px;
+  margin: 15px;
+  border-radius: 5px;
+  padding: 2rem 1.5rem;
+  box-shadow: 0 10px 10px rgba(56, 56, 56, 0.2),
+    10px 10px 20px rgba(48, 48, 48, 0.2);
+
+  @include mq(768px) {
+    width: 380px;
+    height: 450px;
+    padding: 2rem 1.7rem;
+  }
+
+  @include mq(991px) {
+    width: 380px;
+    height: 400px;
+    padding: 2rem 0.7rem;
+  }
+
+  @include mq(1024px) {
+    width: 320px;
+    margin: 0px 10px;
+    padding: 2rem 1.4rem;
+  }
+}
+
+.card:hover {
+  .card-icon {
+    img {
+      width: 30%;
+
+      @include mq(1025px) {
+        width: 32%;
+      }
+    }
+  }
+}
+
+.card-icon {
+  height: 30%;
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 10px 0px;
+
+  img {
+    width: 26%;
+    z-index: 2;
+    transition: all 0.2s ease;
+    transform: translateZ(200px);
+    color: $Fontcolor-main;
+
+    @include mq(1025px) {
+      width: 30%;
+    }
+  }
+}
+
+.info {
+  width: 100%;
+  max-height: 70%;
+  padding-top: 10px;
+  color: rgb(25, 62, 92);
+  position: relative;
+
+  h1 {
+    font-size: 1.3rem;
+    font-weight: bold;
+    transition: all 0.75s ease-out;
+
+    span {
+      color: $Fontcolor-main;
+      font-size: 1.7rem;
+    }
+  }
+
+  p {
+    font-size: 1.2rem;
+    padding: 2rem 0rem;
+    color: #585858;
+    transition: all 0.75s ease-out;
+  }
+}
+
+.see-button {
+  width: 100%;
+  position: absolute;
+  transition: all 0.75s ease-out;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  bottom: 20px;
+  left: 20px;
+
+  span {
+    width: 18px;
+    height: 2px;
+    margin-right: 5px;
+    background-color: $Fontcolor-main;
+  }
+
+  button {
+    padding: 1rem 0rem;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: $Fontcolor-main;
+    cursor: pointer;
+    border-radius: 30px;
+    font-weight: bolder;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    transition: all 0.2s ease-out;
+
+    &:hover {
+      font-size: 1.1rem;
+    }
+  }
+}

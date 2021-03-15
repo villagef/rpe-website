@@ -1,0 +1,45 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200&family=Roboto:wght@300&family=Bodoni+Moda&display=swap");
+// @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;1,700&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
+
+$Fontcolor-main: #d42028;
+$Fontcolor-second: #1e2f3b;
+$Fontcolor-navbar: #fff;
+$BackgroundColor-main: #f8f8f8;
+$BackgroundColor-second: #fff;
+$BackgroundColor-dark: rgb(17, 40, 56);
+$Fontfamily-serif: "Montserrat", sans-serif;
+$Fontfamily-sansSerif-1: "Montserrat", sans-serif;
+$Fontfamily-sansSerif-2: "Montserrat", sans-serif;
+$Fontfamily-sansSerif-3: "Montserrat", sans-serif;
+
+@mixin mq($size) {
+  @media only screen and (min-width: $size) {
+    @content;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden !important;
+  color: $Fontcolor-second;
+  font-family: $Fontfamily-sansSerif-2;
+  transition: all 0.9s ease;
+}
+
+.mainContainer {
+  width: 100vw;
+  height: 100vh;
+}
+
+.section {
+  width: 100%;
+  display: flex;
+}
+

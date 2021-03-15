@@ -1,0 +1,22 @@
+.homeWrapper-operations {
+    width: 100vw;
+    height: 95vh;
+    background-color: rgb(34, 95, 175);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: $Fontfamily-serif;
+  
+    img {
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+  
+  

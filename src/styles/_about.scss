@@ -1,0 +1,620 @@
+.aboutWrapper {
+  width: 100%;
+  position: relative;
+  background-color: $BackgroundColor-second;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+
+  p {
+    letter-spacing: 0.8px;
+    font-size: 0.8rem;
+
+    @include mq(991px) {
+      font-size: 1rem;
+    }
+  }
+}
+//=================THUMBNAIL=====================
+.about-thumbnail-section {
+  width: 100%;
+  height: 70vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  position: relative;
+  letter-spacing: 1.1px;
+  overflow: hidden;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+
+  .about-thumbnail-image {
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    position: relative;
+    background-color: white;
+
+    img {
+      object-fit: cover;
+      width: 100vw;
+      height: 70vh;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-repeat: no-repeat;
+      z-index: 0;
+
+      @include mq(700px) {
+        height: 75vh;
+      }
+      @include mq(991px) {
+        height: 70vh;
+      }
+    }
+  }
+
+  @include mq(700px) {
+    height: 75vh;
+  }
+  @include mq(991px) {
+    height: 70vh;
+  }
+}
+
+.about-thumbnail-content {
+  width: 80%;
+  padding: 20px 10px;
+  margin-top: 70px;
+  position: absolute;
+  bottom: 0%;
+  right: 6%;
+  letter-spacing: 7px;
+  text-align: end;
+  z-index: 3;
+
+  @include mq(991px) {
+    width: 60%;
+    bottom: 7%;
+  }
+
+  h1 {
+    font-size: calc(30px + 40 * ((53vw + 53vh) - 600px) / 820);
+
+    @include mq(991px) {
+      font-size: calc(8px + 40 * ((53vw + 53vh) - 600px) / 820);
+    }
+  }
+
+  span {
+    color: $Fontcolor-main;
+    font-size: calc(30px + 30 * ((53vw + 53vh) - 600px) / 820);
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+  }
+
+  p {
+    letter-spacing: 5px;
+    font-size: 0.7rem;
+
+    @include mq(991px) {
+      font-size: 1rem;
+    }
+  }
+}
+
+.about-puzzles-home {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+
+  .c-puzzle:nth-of-type(2) {
+    background-color: rgba(204, 204, 204, 0.5);
+    background-color: rgba(17, 40, 56, 0.25);
+    left: 3%;
+    top: 0;
+    width: 15%;
+    height: 100%;
+    transform: skewX(-25deg) translateZ(0);
+    transition: opacity 2.2s cubic-bezier(0.23, 1, 0.32, 1) 0.8s;
+
+    @include mq(991px) {
+      width: 5%;
+    }
+  }
+
+  .c-puzzle:nth-of-type(3) {
+    background-color: rgba(204, 204, 204, 0.5);
+    background-color: rgba(17, 40, 56, 0.3);
+    left: 10%;
+    top: 0;
+    width: 18%;
+    height: 100%;
+    transform: skewX(25deg) translateZ(0);
+    transition: opacity 2.2s cubic-bezier(0.23, 1, 0.32, 1) 0.8s;
+
+    @include mq(991px) {
+      width: 8%;
+      left: 5%;
+      transform: skewX(33deg) translateZ(0);
+    }
+  }
+}
+
+//====================WHO WE ARE=========================
+
+.about-content-section {
+  width: 100%;
+  background-color: rgb(255, 255, 255);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 0px;
+
+  @include mq(991px) {
+    padding: 0;
+  }
+
+  .about-who-we-are,
+  .about-team-wrapper {
+    width: 100%;
+    height: 100%;
+    max-width: 1300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: justify;
+
+    h1 {
+      position: relative;
+      margin-bottom: 15px;
+      text-transform: uppercase;
+      letter-spacing: 1.3px;
+      font-family: $Fontfamily-serif;
+      color: $Fontcolor-second;
+      text-align: center;
+      font-size: 1.5rem;
+
+      @include mq(700px) {
+        font-size: 2rem;
+      }
+      @include mq(991px) {
+        font-size: 2rem;
+        text-align: left;
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        bottom: -20px;
+        left: 50%;
+        width: 10%;
+        height: 5px;
+        transform: translateX(-50%);
+        background-color: $Fontcolor-main;
+        border-radius: 10px;
+
+        @include mq(991px) {
+          left: 4%;
+          width: 7%;
+        }
+      }
+    }
+
+    p {
+      padding-top: 22px;
+      font-size: 0.8rem;
+      text-align: justify;
+
+      @include mq(700px) {
+        font-size: 1.1rem;
+      }
+      @include mq(991px) {
+        font-size: 1.2rem;
+      }
+      @include mq(1025px) {
+        font-size: 1rem;
+      }
+    }
+
+    .wwa-content {
+      display: flex;
+      margin-top: 0px;
+
+      .wwa-col {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        letter-spacing: 1.3px;
+
+        @include mq(991px) {
+          width: 60%;
+          margin-left: 50px;
+        }
+
+        .wwa-col-img {
+          position: absolute;
+          width: 80%;
+          height: 110%;
+          top: -30px;
+          right: 5%;
+          z-index: 10;
+          display: none;
+
+          @include mq(991px) {
+            display: block;
+            width: 95%;
+          }
+
+          img {
+            width: 100%;
+            // min-width: 378px;
+            max-height: 110%;
+            object-fit: cover;
+            box-shadow: 0 10px 10px rgba(56, 56, 56, 0.2),
+              10px 10px 20px rgba(48, 48, 48, 0.2);
+          }
+        }
+      }
+
+      .wwa-col-content {
+        padding: 30px;
+      }
+
+      .wwa-col-img-wrapper {
+        width: 0;
+        padding: 0;
+
+        @include mq(991px) {
+          width: 50%;
+          height: auto;
+        }
+      }
+    }
+  }
+}
+
+//====================WE ARE DIFFERENT========================
+
+.about-content-section3 {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-family: $Fontfamily-sansSerif-3;
+  position: relative;
+  background: $BackgroundColor-main;
+  background-color: rgb(17, 40, 56);
+
+  a {
+    text-decoration: none;
+  }
+
+  .about-content-wrapper3 {
+    width: 100%;
+    height: 100%;
+    max-width: 1600px;
+    padding: 20px 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    @include mq(991px) {
+      padding: 50px 10px;
+    }
+
+    .title3 {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      position: relative;
+      color: white;
+
+      &::before {
+        content: "";
+        position: absolute;
+        bottom: -5px;
+        left: 50%;
+        width: 10%;
+        height: 6px;
+        transform: translateX(-50%);
+        background-color: $Fontcolor-main;
+        border-radius: 10px;
+      }
+
+      h1 {
+        margin-bottom: 10px 0;
+        width: 100%;
+        letter-spacing: 1.3px;
+        font-family: $Fontfamily-serif;
+        font-size: 1.8rem;
+
+        @include mq(991px) {
+          font-size: 2rem;
+        }
+      }
+    }
+
+    .cards3 {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+      align-items: center;
+      width: 100%;
+      height: 100%;
+      max-width: 1300px;
+
+      .card3 {
+        width: 300px;
+        height: 370px;
+        margin-top: 30px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+
+        &:hover {
+          img {
+            width: 80px;
+          }
+        }
+
+        img {
+          width: 70px;
+          margin: 20px 0;
+          transition: all 0.2s ease-out;
+        }
+
+        div {
+          width: 100%;
+          height: 100%;
+          h3 {
+            margin-bottom: 20px;
+            font-size: 1.5rem;
+            font-weight: bold;
+          }
+        }
+      }
+    }
+  }
+}
+//================ABOUT OUR TEAM=======================
+.about-team-section {
+  margin-top: 20px;
+  margin-bottom: 20px;
+
+  @include mq(991px) {
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+}
+
+//====================KEY INDUSTRIES===========================
+.industriesSection {
+  width: 100vw;
+  position: relative;
+  background-color: $BackgroundColor-main;
+  background-color: #112838;
+  color: white;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 20px 0px 20px;
+
+  .industries-wrapper {
+    width: 100%;
+    max-width: 1300px;
+    height: 100%;
+    // background-color: red;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    h1 {
+      position: relative;
+      margin-bottom: 20px;
+      text-transform: uppercase;
+      letter-spacing: 1.3px;
+      font-family: $Fontfamily-serif;
+      text-align: center;
+      font-size: 1.8rem;
+
+      @include mq(991px) {
+        font-size: 2rem;
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        bottom: -20px;
+        left: 50%;
+        width: 13%;
+        height: 6px;
+        transform: translateX(-50%);
+        background-color: $Fontcolor-main;
+        border-radius: 10px;
+      }
+    }
+
+    .industry-cards {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      align-items: center;
+      border-radius: 5px 5px 0 0;
+
+      @include mq(991px) {
+        flex-direction: row;
+      }
+
+      .industry-card {
+        background-color: transparent;
+        width: 300px;
+        height: 390px;
+        perspective: 1000px;
+        text-align: center;
+        margin: 20px 10px;
+        color: #112838;
+
+        .industry-card-inner {
+          position: relative;
+          width: 100%;
+          min-height: 350px;
+          text-align: center;
+          transition: transform 0.6s;
+          transform-style: preserve-3d;
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+
+          .industry-card-front,
+          .industry-card-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+            border-radius: 5px;
+
+            div {
+              border-radius: 0px 0px 5px 5px;
+            }
+          }
+
+          .industry-card-front {
+            background-color: #bbb;
+            color: black;
+
+            img {
+              height: 80%;
+              width: 100%;
+              object-fit: cover;
+              border-radius: 10px 10px 0 0;
+            }
+            div {
+              height: 20%;
+              width: 100%;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              color: $Fontcolor-second;
+              background-color: white;
+            }
+          }
+
+          .industry-card-back {
+            background-color: #ffffff;
+            position: relative;
+            min-height: 350px;
+            color: white;
+            transform: rotateY(180deg);
+          }
+        }
+      }
+
+      .industry-card:hover .industry-card-inner {
+        transform: rotateY(180deg);
+      }
+    }
+  }
+}
+
+//================OUR PARTNERS=======================
+.about-partners-section {
+  width: 100vw;
+  min-height: 202px;
+  position: relative;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .about-partners-wrapper {
+    width: 90%;
+    max-width: 1300px;
+    height: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 40px 0;
+
+    h1 {
+      font-family: $Fontfamily-serif;
+      margin-bottom: 20px;
+      width: 100%;
+      position: relative;
+      letter-spacing: 1.3px;
+      font-size: 1.8rem;
+      text-align: center;
+
+      @include mq(991px) {
+        font-size: 2rem;
+        padding: 0 30px;
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        bottom: -20px;
+        left: 50%;
+        width: 10%;
+        height: 5px;
+        transform: translateX(-50%);
+        background-color: $Fontcolor-main;
+        border-radius: 10px;
+
+        @include mq(991px) {
+          width: 5%;
+        }
+      }
+    }
+
+    p {
+      width: 100%;
+      margin-top: 20px;
+      letter-spacing: 0.8px;
+      padding: 0 15px;
+      text-align: justify;
+      font-size: 1rem;
+
+      @include mq(700px) {
+        font-size: 1.1rem;
+      }
+      @include mq(991px) {
+        font-size: 1.2rem;
+        text-align: center;
+      }
+      @include mq(1025px) {
+        font-size: 1rem;
+      }
+    }
+  }
+}

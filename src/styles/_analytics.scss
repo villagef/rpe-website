@@ -1,0 +1,562 @@
+.analyticsWrapper {
+  width: 100vw;
+  overflow: hidden;
+  flex-direction: column;
+  font-family: $Fontfamily-sansSerif-3;
+}
+
+//=======================THUMBNAIL=========================
+.analytics-thumbnail-section {
+  width: 100%;
+  height: 55vh;
+  background: linear-gradient(
+    90deg,
+    #012036 3%,
+    #0c3c70 60%,
+    #317197 100%
+  );
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: rgb(255, 255, 255);
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  position: relative;
+  letter-spacing: 0.8px;
+  overflow: hidden;
+
+  @include mq(991px) {
+    height: 80vh;
+  }
+
+  .analytics-thumbnail-image {
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    position: relative;
+
+
+    img {
+      height: 70%;
+      position: absolute;
+      top: 10%;
+      left: 0;
+
+      @include mq(500px) {
+        height: 90%;
+        position: absolute;
+        top: 5%;
+        left: 0;
+      }
+
+      @include mq(991px) {
+        height: 85%;
+        top: 5%;
+        left: -5%;
+      }
+
+      @include mq(1025px) {
+        height: 110%;
+        top: -2%;
+        left: 0;
+      }
+
+    }
+  }
+}
+
+.analytics-thumbnail-content {
+  width: 90%;
+  height: auto;
+  padding: 20px 10px;
+  margin-top: 70px;
+  position: absolute;
+  bottom: 0%;
+  right: 6%;
+  letter-spacing: 7px;
+  text-align: end;
+
+  @include mq(991px) {
+    width: 50%;
+    bottom: 7%;
+  }
+
+  h1 {
+    font-size: calc(30px + 40 * ((53vw + 53vh) - 600px) / 820);
+
+    @include mq(991px) {
+      font-size: calc(8px + 40 * ((53vw + 53vh) - 600px) / 820);
+    }
+  }
+
+  p {
+    font-size: 0.8rem;
+
+    @include mq(991px) {
+      font-size: 1rem;
+    }
+  }
+
+  span {
+    color: $Fontcolor-main;
+    font-size: calc(45px + 40 * ((53vw + 53vh) - 600px) / 820);
+    font-weight: bold;
+  }
+}
+
+//======================CARDS==========================
+
+.analytics-content-section2 {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-family: $Fontfamily-sansSerif-3;
+  position: relative;
+  background: $BackgroundColor-main;
+  background: white;
+
+  .analytics-content-wrapper2 {
+    width: 100%;
+    height: 100%;
+    max-width: 1600px;
+    padding: 40px 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .title2 {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      position: relative;
+      width: 100%;
+
+      &::before {
+        content: "";
+        position: absolute;
+        bottom: -25px;
+        left: 50%;
+        width: 10%;
+        height: 6px;
+        transform: translateX(-50%);
+        background-color: $Fontcolor-main;
+        border-radius: 10px;
+      }
+
+      h1 {
+        margin-bottom: 10px;
+        width: 100%;
+        font-family: $Fontfamily-serif;
+        font-size: 1.8rem;
+
+        @include mq(991px) {
+          width: 70%;
+          font-size: 2rem;
+        }
+      }
+
+      p {
+        font-size: 1rem;
+        text-align: justify;
+        padding: 5px 20px;
+
+        @include mq(991px) {
+          font-size: 1.3rem;
+        }
+      }
+    }
+
+    .cards2 {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      align-items: center;
+      width: 100%;
+      height: 100%;
+      max-width: 1300px;
+      margin-top: 30px;
+
+      @include mq(991px) {
+        flex-direction: row;
+      }
+
+      .card2 {
+        width: 300px;
+        height: 390px;
+        margin-top: 30px;
+        border-radius: 5px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        box-shadow: 0 10px 10px rgba(56, 56, 56, 0.2),
+          10px 10px 20px rgba(48, 48, 48, 0.2);
+
+        &:hover {
+          img {
+            width: 90px;
+          }
+        }
+
+        img {
+          width: 80px;
+          margin: 20px 0;
+          transition: all 0.2s ease-out;
+        }
+
+        h3 {
+          margin-bottom: 20px;
+          font-size: 1.5rem;
+          font-weight: bold;
+        }
+
+        p {
+          margin: 10px 30px;
+          text-align: justify;
+        }
+      }
+    }
+  }
+}
+
+//=======================OUR SERVICES==========================
+
+.analytics-services-section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  background-color: #112838;
+  padding-top: 20px;
+  color: white;
+  z-index: 100;
+
+  .analytics-services-content {
+    width: 100%;
+    max-width: 1300px;
+    padding: 20px 30px;
+    letter-spacing: 1.1px;
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+    justify-content: center;
+    align-items: flex-start;
+
+    h1 {
+      font-weight: bolder;
+      font-family: $Fontfamily-serif;
+      font-size: 1.8rem;
+
+      @include mq(991px) {
+        font-size: 2rem;
+      }
+    }
+
+    p {
+      font-size: 1rem;
+      margin: 0;
+
+      @include mq(991px) {
+        font-size: 1.15rem;
+      }
+    }
+  }
+
+  .analytics-services-cards-section {
+    width: 100%;
+    max-width: 1300px;
+    height: 100%;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    @include mq(991px) {
+      padding: 0px 20px;
+    }
+  }
+}
+
+.analytics-services-card {
+  width: 100%;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  padding: 15px;
+  border-radius: 20px;
+
+  @include mq(991px) {
+    flex-direction: row;
+    width: 50%;
+    min-width: 430px;
+    height: 170px;
+  }
+
+  p {
+    margin: 0;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    border-top: 1px solid rgb(226, 226, 226);
+  }
+
+  .analytics-services-card-img {
+    width: 120px;
+    height: 120px;
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 60px;
+    background-color: rgb(255, 255, 255);
+
+    img {
+      height: 100%;
+      padding: 24px;
+    }
+  }
+
+  .analytics-services-card-content {
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+
+    h1 {
+      font-weight: bolder;
+      font-size: 1.7rem;
+    }
+
+    p {
+      width: 100%;
+      letter-spacing: 1.3px;
+      font-size: 0.9rem;
+
+      @include mq(991px) {
+        padding-right: 20px;
+      }
+    }
+  }
+}
+
+.analytics-services-card:hover {
+  .analytics-services-card-img {
+    img {
+      padding: 18px;
+      transition: 0.2s ease-in-out;
+    }
+  }
+}
+
+//=========================INDUSTRY EXPERTISE============================
+.analytics-content-section {
+  width: 100%;
+  background-color: rgb(255, 255, 255);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 0px;
+
+  .analytics-industry-expertise {
+    width: 100%;
+    max-width: 1300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: justify;
+
+    h1 {
+      position: relative;
+      margin-bottom: 20px;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      font-size: 2rem;
+      font-family: $Fontfamily-serif;
+      color: $Fontcolor-second;
+      text-align: center;
+
+      &::before {
+        content: "";
+        position: absolute;
+        bottom: -25px;
+        left: 50%;
+        width: 13%;
+        height: 6px;
+        transform: translateX(-50%);
+        background-color: $Fontcolor-main;
+        border-radius: 10px;
+      }
+    }
+
+    .wwa-content {
+      display: flex;
+      margin-top: 0px;
+
+      @include mq(991px) {
+        margin-top: 30px;
+      }
+
+      .wwa-col {
+        width: 100%;
+        padding: 30px;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        letter-spacing: 1.3px;
+
+        @include mq(991px) {
+          width: 50%;
+        }
+
+        .wwa-col-img {
+          position: absolute;
+          width: 0;
+          height: 100%;
+          top: -15%;
+          right: 5%;
+          z-index: 10;
+          display: none;
+
+          @include mq(991px) {
+            display: block;
+            width: 95%;
+          }
+
+          img {
+            width: 80%;
+            margin-left: 10%;
+            object-fit: cover;
+          }
+        }
+      }
+
+      .wwa-col-img-wrapper {
+        width: 0;
+        padding: 0;
+
+        @include mq(991px) {
+          width: 50%;
+          padding: 30px;
+        }
+      }
+    }
+  }
+}
+
+//=====================ROI==========================
+.analytics-roi-section {
+  width: 100%;
+  background-color: white;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 0px;
+  margin-top: 0px;
+  z-index: 100;
+
+  @include mq(991px) {
+    padding-bottom: 30px;
+    margin-top: 60px;
+  }
+
+  .analytics-roi-wrapper {
+    width: 100%;
+    max-width: 1300px;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: justify;
+
+    h1 {
+      position: relative;
+      margin-bottom: 20px;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      font-size: 2rem;
+      font-family: $Fontfamily-serif;
+      color: $Fontcolor-second;
+      text-align: center;
+
+      &::before {
+        content: "";
+        position: absolute;
+        bottom: -25px;
+        left: 50%;
+        width: 13%;
+        height: 6px;
+        transform: translateX(-50%);
+        background-color: $Fontcolor-main;
+        border-radius: 10px;
+      }
+    }
+
+    .arw-content {
+      display: flex;
+
+      .arw-col {
+        width: 100%;
+        padding: 30px;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        letter-spacing: 1.3px;
+
+        @include mq(991px) {
+          width: 50%;
+        }
+
+        .arw-col-img {
+          position: absolute;
+          width: 0;
+          height: 100%;
+          top: -5%;
+          left: 10%;
+          z-index: 10;
+          display: none;
+
+          @include mq(991px) {
+            display: block;
+            width: 95%;
+          }
+
+          img {
+            width: 90%;
+            min-width: 378px;
+            max-height: 110%;
+            object-fit: fill;
+          }
+        }
+      }
+
+      .arw-col-img-wrapper {
+        width: 0;
+        padding: 0;
+
+        @include mq(991px) {
+          width: 50%;
+          padding: 30px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,57 @@
+//----------------------brand section---------------------------
+.brandSection {
+  width: 100vw;
+  min-height: 5vh;
+  padding: 10px 0;
+  background-color: $BackgroundColor-second;
+  position: relative;
+
+  @include mq(991px) {
+    padding: 20px 0;
+  }
+}
+
+.brandsWrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 1400px;
+  margin: 5px auto;
+  position: relative;
+
+  .brand {
+    width: 150px;
+    margin: 5px 20px;
+
+    @include mq(991px) {
+      width: 100px;
+      margin: 5px 50px;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &::after {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 300px;
+    height: 2px;
+    background-color: rgba(230, 230, 230, 0.5);
+
+    @include mq(991px) {
+      top: -30px;
+      max-width: 1000px;
+    }
+  }
+}

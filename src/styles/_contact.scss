@@ -1,0 +1,276 @@
+.contactWrapper {
+  width: 100vw;
+  height: 95vh;
+  position: relative;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  background-color: $BackgroundColor-main;
+
+  @include mq(991px) {
+    background-position: center;
+    overflow-y: hidden;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    background-color: rgba(17, 40, 56, 0.9);
+    z-index: 1;
+  }
+}
+
+.contact-image-container {
+  width: 100%;
+  height: 0%;
+  margin-top: 80px;
+  position: relative;
+  display: none;
+
+  @include mq(700px) {
+    height: 70%;
+    margin-top: 0;
+    display: block;
+  }
+
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    height: calc(100% + 20px);
+    z-index: 100;
+    background-color: rgba(68, 68, 68, 0.05);
+  }
+
+  .puzzles-contact {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    padding-top: 80px;
+    background-image: url("https://raw.githubusercontent.com/rpe-eng/rpe-web-graphic/main/img/map.png");
+    background-position: top;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    .c-puzzle:nth-of-type(2) {
+      background-color: rgba(17, 40, 56, 0.25);
+      right: 3%;
+      top: 0;
+      width: 7%;
+      height: 100%;
+      transform: skewX(-20deg) translateZ(0);
+      transition: opacity 2.2s cubic-bezier(0.23, 1, 0.32, 1) 0.8s;
+
+      @include mq(991px) {
+        width: 5%;
+      }
+    }
+
+    .c-puzzle:nth-of-type(3) {
+      background-color: rgba(17, 40, 56, 0.25);
+      right: 5%;
+      top: 0;
+      width: 14%;
+      height: 100%;
+      transform: skewX(35deg) translateZ(0);
+      transition: opacity 2.2s cubic-bezier(0.23, 1, 0.32, 1) 0.8s;
+
+      @include mq(991px) {
+        width: 8%;
+      }
+    }
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: left;
+  }
+}
+
+.contact-content-container {
+  width: 100%;
+  height: calc(95vh - 80px);
+  background-color: rgb(248, 248, 248);
+  position: relative;
+  top: 0;
+  left: 0;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  @include mq(700px) {
+    height: 60vh;
+  }
+
+  @include mq(991px) {
+    padding-top: 0;
+    height: 30vh;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -20px;
+    left: 0;
+    width: 100vw;
+    height: 20px;
+    background-color: white;
+    display: none;
+
+    @include mq(700px) {
+      display: block;
+    }
+  }
+}
+
+.vemap-tag {
+  position: absolute;
+  bottom: 20px;
+  right: 0;
+  margin: 0;
+  padding-right: 10px;
+  color: #ccc;
+  z-index: 1000;
+  font-size: 0.5rem;
+
+  a {
+    text-decoration: none;
+    color: #ccc;
+  }
+}
+
+.contact-container {
+  width: 100%;
+  max-width: 1300px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+
+  @include mq(991px) {
+    flex-direction: row;
+  }
+}
+
+.address-content {
+  width: auto;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: $Fontfamily-sansSerif-3;
+  padding: 30px 0;
+
+  @include mq(700px) {
+    padding: 0;
+  }
+
+  .country-name {
+    color: $Fontcolor-main;
+    color: $Fontcolor-second;
+    font-size: 1.3rem;
+    font-weight: bold;
+  }
+
+  ul {
+    width: 300px;
+  }
+
+  ul li {
+    list-style: none;
+    text-decoration: none;
+    padding: 2px;
+    letter-spacing: 1.3px;
+
+    p {
+      margin: 0;
+      font-weight: bold;
+    }
+
+    span {
+      color: $Fontcolor-main;
+    }
+  }
+}
+
+.form-container {
+  width: 100%;
+  height: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 0;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+
+  @include mq(700px) {
+    height: 60%;
+  }
+
+  @include mq(991px) {
+    width: 30%;
+    height: 90%;
+    padding: 0;
+    border: none;
+  }
+
+  h1 {
+    font-family: $Fontfamily-serif;
+    font-size: 1.8rem;
+
+    @include mq(991px) {
+      font-size: 2rem;
+    }
+  }
+
+  button {
+    width: 210px;
+    height: 40px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    border-style: none;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    background-color: rgb(17, 40, 56);
+    color: white;
+    border: none;
+    margin-top: 20px;
+
+    &:hover {
+      font-size: 1.3rem;
+      background-color: rgb(17, 40, 56);
+      color: white;
+      border: none;
+    }
+  }
+}
+
+.row {
+  height: 33%;
+
+  @include mq(700px) {
+    height: 90%;
+  }
+}
